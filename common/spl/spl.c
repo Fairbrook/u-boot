@@ -420,6 +420,7 @@ void board_init_r(gd_t *dummy1, ulong dummy2)
 #ifdef CONFIG_SYS_SPL_ARGS_ADDR
 	spl_image.arg = (void *)CONFIG_SYS_SPL_ARGS_ADDR;
 #endif
+    printf("\n====== SPL: Kevin Martinez U-Boot ======\n");
 	board_boot_order(spl_boot_list);
 
 	if (boot_from_devices(&spl_image, spl_boot_list,

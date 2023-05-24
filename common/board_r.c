@@ -642,6 +642,7 @@ static int run_main_loop(void)
 #ifdef CONFIG_SANDBOX
 	sandbox_main_loop_init();
 #endif
+    printf("\n====== U-Boot Kevin Martinez Main Loop ======\n");
 	/* main_loop() can return to retry autoboot, if so just run it again */
 	for (;;)
 		main_loop();
