@@ -89,3 +89,4 @@ GTAGS
 *.orig
 *~
 \#*#
+Session.vim
