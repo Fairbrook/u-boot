@@ -7,6 +7,7 @@ ifndef CONFIG_SPL_BUILD
 # core command
 obj-y += boot.o
 obj-$(CONFIG_CMD_BOOTM) += bootm.o
+obj-$(CONFIG_CMD_CUSTOM) += custom_gpio.o
 obj-y += help.o
 obj-y += version.o
 
