@@ -1,8 +1,8 @@
 #include <command.h>
 #include <common.h>
 #include <dm.h>
-#include <asm/gpio.h>
 #include <errno.h>
+#include <asm/gpio.h>
 #define long_delay 200000
 #define short_delay 20000
 
@@ -54,7 +54,7 @@ static int do_custom(struct cmd_tbl *cmdtp, int flag, int argc,
   };
   unsigned int gpios[] = {0, 0, 0, 0, 0};
   ret = lookup_names(gpio_names, gpios, 5);
-  for (int i=0; i<5; i++) {
+  for (int i = 0; i < 5; i++) {
     printf("Found %d \n", gpios[i]);
   }
   if (ret) {
@@ -99,4 +99,5 @@ static int do_custom(struct cmd_tbl *cmdtp, int flag, int argc,
   return 0;
 }
 
-U_BOOT_CMD(custom_gpio, 1, 0, do_custom, "help", "help");
+U_BOOT_CMD(custom_gpio, 1, 0, do_custom, "Custom GPIO Command",
+           "Custom secuence of LEDs by using GPIO operations");

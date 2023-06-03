@@ -1702,10 +1702,10 @@ config CMD_UBIFS
 	  UBIFS is a file system for flash devices which works on top of UBI.
 
 config CMD_CUSTOM
-	bool "Enable custom command"
+	bool "Enable custom GPIO usage command"
 	depends on CMDLINE
 	default y
 	help
-	  IDK help me
+        Shows a secuence of LEDS by using GPIO Operations 
 
 endmenu
