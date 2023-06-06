@@ -25,12 +25,13 @@ int do_decode_kernel(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[]) {
     printf("Bad key format %s\n", key_str);
     return -1;
   }
-  printf("Decoding from 0x%x to 0x%x with key 0x%X", (int)start, (int)dest, key);
+  printf("Decoding from 0x%X to 0x%X with key 0x%X\n", (int)start, (int)dest, key);
   char *start_addr = (char *)start;
   char *dest_addr = (char *)dest;
   for (int i = 0; i < KERNEL_SIZE; i++) {
     dest_addr[i] = start_addr[i] ^ key;
   }
+  printf("Ready\n\n");
   return 0;
 }
 
