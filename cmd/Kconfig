@@ -1701,4 +1701,13 @@ config CMD_UBIFS
 	help
 	  UBIFS is a file system for flash devices which works on top of UBI.
 
+config CMD_DECODE_KERNEL
+	tristate "Custom command for decoding a zImage with XOR enctription"
+	depends on CMDLINE
+    default y
+	help
+	  Privded a start memory address, a destination memory address and a Key
+	  this command will try to decrypt the information in the start address
+	  with an XOR decription and place the result in the destination address.
+
 endmenu
